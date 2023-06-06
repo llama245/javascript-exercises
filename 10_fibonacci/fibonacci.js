@@ -1,6 +1,22 @@
-const fibonacci = function() {
+const fibonacci = function (number) { 
+    let i = 2
+    let limit = 100000
 
-};
+    const fib = [0, 1]
 
-// Do not edit below this line
-module.exports = fibonacci;
+    if(number < 0 ) {
+        return "OOPS"
+    }
+
+    for (i; i < limit; i++) {
+        
+        fib[i] = fib[i-2] + fib[i-1];
+        fib.push(fib[i]);
+    }
+    return fib[number]
+}
+
+console.log(fibonacci(25))
+
+
+
