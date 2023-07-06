@@ -1,4 +1,5 @@
-const fibonacci = function(number) { 
+const fibonacci = function(number) {
+    Number(number) 
     let i = 2;
     let limit = 100000;
 
@@ -15,9 +16,10 @@ const fibonacci = function(number) {
         }
         
     };
+    
     return fib[number]
 };
 
 
 
-console.log(fibonacci(6))
+console.log(fibonacci(8))
