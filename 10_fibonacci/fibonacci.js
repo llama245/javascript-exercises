@@ -4,13 +4,18 @@ const fibonacci = function(number) {
     let limit = 100000;
     const fib = [0,1];
     
-    for(i; i < limit; i++){
+    if(number < 0){
+        return "OOPS"
+    }else{    
+        for(i; i < limit; i++){
         fib[i] = fib[i-2] + fib[i-1];
         fib.push(fib[i]);
-    };
+    };}
     
-    console.log(fib[number]);
+    return (fib[number]);
 };
 
 
-fibonacci("6")
+
+// Do not edit below this line
+module.exports = fibonacci;
